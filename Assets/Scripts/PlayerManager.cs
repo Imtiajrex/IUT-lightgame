@@ -21,7 +21,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private Light2D globalLight;
 
-    private float darknessPerSecond = 10f;
+
+    [SerializeField] private float darknessPerSecond = 25f;
     void Awake()
     {
         if (Instance != null)
@@ -51,7 +52,7 @@ public class PlayerManager : MonoBehaviour
                     {
                         darkness = true;
                         globalLight.intensity = 0f;
-                        InvokeRepeating("DarknessTimer", 1f, 1f);
+                        InvokeRepeating("DarknessTimer", 0.1f, 0.1f);
                     }
                 }
                 else
@@ -75,6 +76,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Die" && !darkness && alive)
         {
+            AudioManager.instance.Play("Death");
             alive = false;
             playerMovement.enabled = false;
             playerSprite.enabled = false;
@@ -87,6 +89,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Finish")
         {
+
+            AudioManager.instance.Play("Win");
             GameManager.Instance.playing = false;
 
             playerMovement.enabled = false;
@@ -100,7 +104,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (darkness)
         {
-            darknessMeter -= darknessPerSecond;
+            darknessMeter -= darknessPerSecond / 10;
         }
     }
 }

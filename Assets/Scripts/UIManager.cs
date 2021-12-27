@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
 
     public static UIManager Instance { get; private set; }
 
-    [SerializeField]
-    private GameObject gameOverScreen;
-    [SerializeField]
-
-    private GameObject winScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject winScreen;
+    [SerializeField] private Slider darknessSlider;
+    [SerializeField] private ParticleSystem darknessSliderParticles;
     void Awake()
     {
         if (Instance != null)
@@ -33,6 +33,20 @@ public class UIManager : MonoBehaviour
         {
             winScreen.SetActive(true);
         }
+
+        updateSlider((PlayerManager.Instance.darknessMeter) / 100);
+
+        if (PlayerManager.Instance.darknessMeter <= 35f && darknessSliderParticles.isPlaying)
+        {
+            darknessSliderParticles.Stop();
+        }
+        else
+        {
+            if (!darknessSliderParticles.isPlaying)
+            {
+                darknessSliderParticles.Play();
+            }
+        }
     }
     public void Restart()
     {
@@ -44,6 +58,10 @@ public class UIManager : MonoBehaviour
     }
     public void Next()
     {
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void updateSlider(float progress)
+    {
+        darknessSlider.value = progress;
     }
 }
