@@ -1,7 +1,6 @@
 Library
 Logs
 Temp
-.vscode
 PsdPlugin.csproj
 Unity.2D.Animation.Editor.csproj
 Unity.2D.Animation.Runtime.csproj

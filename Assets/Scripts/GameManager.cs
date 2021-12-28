@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public void Finish()
     {
         win = true;
+        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Finished!");
     }
 }
