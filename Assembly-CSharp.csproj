@@ -36,15 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\SquareScripts.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
-     <Compile Include="Assets\Scripts\SquareScripts.cs" />
-     <Compile Include="Assets\FinishComponent.cs" />
-     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
-     <Compile Include="Assets\DangerMovement.cs" />
+     <Compile Include="Assets\Scripts\DangerMovement.cs" />
+     <Compile Include="Assets\Scripts\FinishComponent.cs" />
+     <Compile Include="Assets\Scripts\FollowingDanger.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

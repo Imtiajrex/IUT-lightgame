@@ -5164,11 +5164,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &793338097 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4342164684369683375, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
-  m_PrefabInstance: {fileID: 2428496354840115513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &953176720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5501,16 +5496,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &1720512984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2428496353322567905, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
-  m_PrefabInstance: {fileID: 2428496354840115513}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1776635730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2123734466582267873, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
-  m_PrefabInstance: {fileID: 2428496354840115513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1828621753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5723,36 +5708,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 928fa0789fbadbd4da0528c9865172e5, type: 3}
---- !u!1 &1848154348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2428496353198596565, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
-  m_PrefabInstance: {fileID: 2428496354840115513}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1848154353
+--- !u!114 &1848154353 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848154348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa25627a15b79f54a8be7e20ea180279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 1776635730}
-  winScreen: {fileID: 1720512984}
-  darknessSlider: {fileID: 1983058649}
-  darknessSliderParticles: {fileID: 793338097}
---- !u!114 &1983058649 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4315944111447541734, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6468478161956563317, guid: 2c79616c384d65e4486b4347b538e90e, type: 3}
   m_PrefabInstance: {fileID: 2428496354840115513}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: fa25627a15b79f54a8be7e20ea180279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2088190170

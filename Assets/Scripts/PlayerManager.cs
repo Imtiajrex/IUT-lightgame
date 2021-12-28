@@ -64,6 +64,10 @@ public class PlayerManager : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            playerRigidbody.velocity = new Vector2(0f, 0f);
+        }
         if (darkness && darknessMeter <= 0f)
         {
             darkness = false;
@@ -74,7 +78,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Die" && !darkness && alive)
+        if (other.gameObject.tag == "Die" && !darkness && alive && !GameManager.Instance.gameover && !GameManager.Instance.win)
         {
             AudioManager.instance.Play("Death");
             alive = false;
@@ -87,7 +91,7 @@ public class PlayerManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Finish")
+        if (other.gameObject.tag == "Finish" && alive && !GameManager.Instance.gameover)
         {
 
             AudioManager.instance.Play("Win");
