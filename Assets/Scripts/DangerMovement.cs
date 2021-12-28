@@ -10,6 +10,8 @@ public class DangerMovement : MonoBehaviour
     public bool horizontal = true;
     private bool opposite = true;
 
+    public bool loop = true;
+
 
     // Update is called once per frame
     void Update()
